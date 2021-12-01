@@ -1,0 +1,223 @@
+# vim: ft=zsh
+
+get_account_color() {
+  case $COSMOS_ACCOUNT in
+    experimental)
+      account_color="blue"
+      ;;
+    dev)
+      account_color="green"
+      ;;
+    sandbox)
+      account_color="yellow"
+      ;;
+    production)
+      account_color="red"
+      ;;
+    data-staging)
+      account_color="yellow"
+      ;;
+    data-production)
+      account_color="red"
+      ;;
+    *)
+  esac
+
+  echo $account_color
+}
+
+get_account() {
+  echo "${COSMOS_ACCOUNT:-unknown}"
+}
+
+instance-profile() {
+  cat /aws/meta-data/iam/info | jq ".InstanceProfileArn" | sed -E 's/^.*\/(.+)"/\1/'
+}
+
+instance-iam() {
+  cat /aws/meta-data/iam/security-credentials/$(instance-profile)
+}
+
+instance-iam-val() {
+  instance-iam | jq ".$1" | tr -d '"'
+}
+
+iam-env() {
+  cat <<-EOF
+export AWS_ACCESS_KEY_ID=$(instance-iam-val AccessKeyId)
+export AWS_SECRET_ACCESS_KEY=$(instance-iam-val SecretAccessKey)
+export AWS_SESSION_TOKEN=$(instance-iam-val Token)
+export AWS_SECURITY_TOKEN=$(instance-iam-val Token)
+EOF
+}
+
+export-iam-creds() {
+  $(iam-env)
+  echo "AWS credentials will expire at $(instance-iam-val Expiration), rerun \`$0\` after that"
+}
+
+galaxy-bastion() {
+  aws ec2 describe-instances --region $1 --filters 'Name=tag:Role,Values=Bastion' "Name=tag:Dimension,Values=$2" 'Name=instance-state-name,Values=running' --query 'Reservations[0].Instances[0].PublicDnsName' --output text
+}
+
+circleci-bastion() {
+  aws ec2 describe-instances --region us-west-1 --filters 'Name=tag:Role,Values=Bastion' "Name=tag:Name,Values=CircleCI Bastion" 'Name=instance-state-name,Values=running' --query 'Reservations[0].Instances[0].PublicDnsName' --output text
+}
+
+galaxy-ansible-playbook() {
+  if [[ -z "$DIMENSION" ]] ; then
+    echo "\$DIMENSION must be set"
+    return
+  fi
+  if [[ -z "$REGION" ]] ; then
+    echo "\$REGION must be set"
+    return
+  fi
+
+  ansible-playbook $@
+}
+
+galaxy-ansible() {
+  if [[ -z "$DIMENSION" ]] ; then
+    echo "\$DIMENSION must be set"
+    return
+  fi
+  if [[ -z "$REGION" ]] ; then
+    echo "\$REGION must be set"
+    return
+  fi
+
+  ansible $@
+}
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    export PATH="$HOME/bin:$PATH"
+fi
+
+get_recovery_warning() {
+  if [[ "$(logname)" == 'admin' ]] ; then
+    echo '[recovery]'
+  fi
+}
+
+warn_recovery() {
+  if [[ "$(logname)" == 'admin' ]] ; then
+    echo "\n\nDirect ssh as the 'admin' user is only supported for recovery when LDAP is down.  Tmux idle session locking will prompt for the admin password, which is not available to cpair users.  You may see '\e[1;35m[recovery]\e[0m' if you connected via an old cpair client version.  Please run 'cpair update' on your computer to install the latest version." >&2
+    echo "\n\nIf you are using a cpair graphically and want to access the normal cpair tmux, run: 'tmux -S /var/local/tmux-sockets/pair attach -t pair' and you will be connected. Note: This is much higher latency than a text terminal, as rendering happens on the remote side." >&2
+  fi
+}
+
+# override ressh definition from aliases
+ressh() {
+  local agent_sock
+  for agent_sock in /tmp/ssh-*/agent.*; do
+    [ ! -S "$agent_sock" ] && continue
+
+    local code=$(env SSH_AUTH_SOCK="$agent_sock" timeout 1 ssh-add -L &> /dev/null ; echo "$?")
+
+    if (( code == 0 )); then
+      export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
+      /bin/ln -sf "$agent_sock" "$SSH_AUTH_SOCK"
+      echo "export SSH_AUTH_SOCK=$HOME/.ssh/ssh_auth_sock"
+      echo "/bin/ln -sf $agent_sock $SSH_AUTH_SOCK"
+    elif (( code == 2 )); then
+      rm -f $agent_sock
+    fi
+  done
+
+  echo
+  ssh-add -l 2>/dev/null
+}
+
+
+working_dir_variable_name() {
+  echo "TMUX_WORKING_DIR_$(tmux display-message -p '#{session_name}')_${TMUX_PANE//\%/}"
+}
+
+restore_shell_state() {
+  # editors note: The zsh syntax '${(P)' is equivalent to bash syntax '${!'.
+  export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
+}
+
+record_shell_state() {
+  # set environment variables in the tmux session so that they are propagated to new panes
+  tmux set-environment 'SSH_USERNAME' "$SSH_USERNAME"
+  tmux set-environment 'SEARCH_USERNAME' "$SEARCH_USERNAME"
+  tmux set-environment 'SSH_AUTH_SOCK' "$SSH_AUTH_SOCK"
+}
+
+k8s_context() {
+  if [[ ! -f ${HOME}/.kube/config-rekube ]]; then
+    return
+  fi
+
+  kubectl config get-contexts | awk '$1 == "*" {print "(k8s " ((length($5)==0)?"default":$5) "@" $3 ") "}'
+}
+
+precmd() {
+  if [[ -n "$TMUX" ]]; then
+    record_shell_state
+  fi
+}
+
+chpwd() {
+  if [[ -n "$TMUX" ]]; then
+    tmux set-environment "$(working_dir_variable_name)" "$PWD"
+  fi
+}
+
+run_personalized_setup_script() {
+  local check_file_path="$HOME/.cpair-setup-script.loaded"
+  local setup_script_path="$HOME/.cpair-setup-script"
+  if [[ ! -f $check_file_path ]]; then
+    touch $check_file_path
+    local ghe_username=$(get_tag PaypalUsername)
+    [[ -z $ghe_username ]] && ghe_username=$(get_tag GHEUsername)
+    local ghe_clone="git@github.braintreeps.com:$ghe_username/cpair-setup-script"
+    echo "Checking if personalized setup script repo exists: $ghe_clone"
+    if git ls-remote $ghe_clone HEAD >/dev/null 2>&1 ; then
+      git clone $ghe_clone $setup_script_path
+      pushd $setup_script_path
+      [[ -f ./setup ]] && ./setup
+      [[ -f ./requirements.yaml ]] && ansible-galaxy install -r ./requirements.yaml
+      [[ -f ./playbook.yaml ]] && ansible-playbook playbook.yaml
+      popd
+    else
+      echo "No personal setup script repo found. This will only be attempted once."
+    fi
+  fi
+}
+
+export PATH=/usr/local/go/bin:$PATH
+export PATH="$PATH:$HOME/cosmos/cpair-tools/bin"
+export PATH="$PATH:$HOME/bt/data-terraform/bin/common"
+export PATH="$PATH:$HOME/bt/search-terraform/bin"
+export PATH="$PATH:$HOME/bt/journalist/bin"
+export PATH="$PATH:$HOME/bt/report-builder/bin"
+export PATH="$PATH:$HOME/bt/reporting-data-model/bin"
+
+export KAFKA_PATH=/usr/lib/kafka
+
+export GIT_DUET_GLOBAL=true
+export GIT_DUET_SET_GIT_USER_CONFIG=1
+export GIT_DUET_ROTATE_AUTHOR=1
+export PS1='%{$fg_bold[magenta]%}$(get_recovery_warning)%{$fg_bold[$(get_account_color)]%}[$(get_account)]%{$fg_bold[green]%}%m:%{$fg_bold[blue]%}%~%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}%{$fg[cyan]%}$(k8s_context)%{$fg_bold[red]%}%(?..(rc=%?%) )%{$reset_color%}%#%{$fg_bold[gray]%}$(job_info)%{$reset_color%} '
+
+# aliases
+
+alias bt-tmux-lock='tmux lock-session'
+alias cqlsh-local='cqlsh --ssl'
+
+# After a new tmux pane is spawned, restore the working directory and shell env
+if [[ -n "$TMUX" ]]; then
+  restore_shell_state
+fi
+# set tmux vars for current directory
+chpwd
+
+run_personalized_setup_script
+
+warn_recovery
+# Turn on comments
+setopt interactivecomments

@@ -1,0 +1,45 @@
+#!/bin/bash
+
+params=$@
+
+if [ "$1" == "clone" ]; then
+  declare -a repos=(
+      "github.braintreeps.com:braintree/$2"
+      "github.braintreeps.com:cosmos/$2"
+      "github.braintreeps.com:${SSH_USERNAME:-$USER}/$2"
+      "github.braintreeps.com:$2"
+      "github.paypal.com:CNS/$2"
+      "github.paypal.com:${SSH_USERNAME:-$USER}/$2"
+      "github.paypal.com:$2"
+      "github.com:braintree/$2"
+      "github.com:paypal/$2"
+      "github.com:$2"
+      )
+
+  for repo in "${repos[@]}"
+  do
+    echo -e "\n\033[1m=> Trying $repo\n\033[0m"
+    git clone git@$repo
+    success=$?
+    if [ "$success" -eq 0 ]; then
+      exit
+    fi
+  done
+
+elif [ "$1" == "open" ]; then
+  remote_url=$(git remote show origin | grep 'Fetch URL:' | awk -F@ '{print $2}' | sed -e 's/^\(.*\):\(.*\)/https:\/\/\1\/\2/' | sed -e 's/\(.*\)\.git$/\1/')
+
+  if [ "$2" == "tree" ] && [ "$3" != "" ]; then
+    remote_url="$remote_url/tree/$3"
+  elif [ "$2" != "" ]; then
+    remote_url="$remote_url/commit/$2"
+  fi
+
+  if [ "$(uname)" == "Darwin" ]; then
+    open $remote_url
+  else
+    echo $remote_url
+  fi
+else
+ git $params
+fi

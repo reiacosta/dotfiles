@@ -1,0 +1,69 @@
+#!/bin/bash
+
+usage() {
+  echo "Usage: $0"
+  echo
+  echo "Outputs git 'Co-authored-by' trailers based on active SSH agents."
+  echo "Intended to be used with 'git commit'."
+  echo
+  echo "Example (at the command line):"
+  echo "    git commit -t <(gitcoauthoredby)"
+  echo
+  echo "Example (in vim):"
+  echo "    :r !gitcoauthoredby"
+  echo
+}
+
+for arg in "$@"; do
+  case "${arg,,}" in
+    -h|--help|help)
+      usage >&2
+      exit 0
+      ;;
+  esac
+done
+
+authors_json=$(yamltojson "$HOME/.git-authors")
+
+current_author_name=$(git config user.name)
+current_author_email=$(git config user.email)
+commit_template=$(git config commit.template)
+
+co_authors=""
+
+# Add users based on ssh
+for agent_sock in /tmp/ssh-*/agent.*; do
+  agent_status=$(env SSH_AUTH_SOCK="$agent_sock" timeout 1 ssh-add -L &> /dev/null ; echo "$?")
+
+  if [[ $agent_status -eq 0 ]]; then # agent is "alive"
+    agent_owner="$(stat --format=%U "$agent_sock")"
+    name="$(echo "$authors_json" | jq -r ".authors.\"$agent_owner\"")"
+    if [[ "$name" == "null" ]]; then
+      >&2 echo -e "\033[0;31mCommitter name for SSH user $agent_owner not configured in $HOME/.git-authors"
+      exit 1
+    fi
+    email="$(echo "$authors_json" | jq -r ".email_addresses.\"$agent_owner\"")"
+    if [[ "$email" == "null" ]]; then
+      >&2 echo -e "\033[0;31mCommitter email for SSH user $agent_owner not configured in $HOME/.git-authors"
+      exit 1
+    fi
+    if [[ "$agent_owner" != "admin" ]] && [[ "$email" != "$current_author_email" ]]; then
+      co_authors+="Co-authored-by: $name <$email>\n"
+    fi
+  fi
+done
+
+# Add users based on git-duet
+if [[ ! -z $(git config duet.env.git-committer-name) ]]; then
+  co_authors+="Co-authored-by: $(git config duet.env.git-committer-name) <$(git config duet.env.git-committer-email)>\n"
+fi
+
+if [[ -f $commit_template ]]; then
+  cat $(git config commit.template)
+fi
+
+if [[ $co_authors != "" ]]; then
+  echo
+  echo
+  echo -ne $co_authors
+fi

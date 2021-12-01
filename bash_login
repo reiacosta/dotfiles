@@ -1,0 +1,5 @@
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="/opt/local/lib/mysql5/bin:$PATH"
+export PATH="/usr/local/ruby/bin:$PATH"
+
+source ~/.aliases

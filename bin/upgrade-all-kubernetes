@@ -1,0 +1,11 @@
+#!/bin/bash
+
+gemdir=$(sudo gem env gemdir)                                                                                                       
+# remove any pre-compiled platform binaries that nokogiri ships with as of 1.11.0
+# if present, subsequent Rubygem attempts to install nokogiri will fail due to binary conflicts
+sudo rm -f /usr/local/bin/nokogiri
+sudo gem install --force --no-document --no-wrappers --no-user-install --install-dir $gemdir kubectl-compile kubectl-diff kubectl-condense
+sudo rm -f /usr/local/bin/nokogiri
+sudo gem install --force --no-document --no-wrappers --no-user-install --install-dir $gemdir --pre kubectl-compile-alpha                  
+sudo apt-get update                                                                                                                       
+sudo apt-get install -y kubectl kubectx kubeval bt-kubectl-plugins bt-tmux-deploy-k8s rekube stern                                        

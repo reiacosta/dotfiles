@@ -1,0 +1,4 @@
+#!/bin/bash
+
+setec copy "Pairing station ssh key" -f "$1"
+`env SSH_ASKPASS=pbpaste DISPLAY="" ssh-add < /dev/null`

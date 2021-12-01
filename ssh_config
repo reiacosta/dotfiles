@@ -1,0 +1,47 @@
+Host *
+  IgnoreUnknown UseRoaming,AddKeysToAgent,UseKeychain
+  Compression yes
+  ServerAliveInterval 60
+  UseRoaming no
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host pair*.chi*
+  User pair
+  ForwardAgent yes
+  Port 51322
+  ConnectTimeout 5
+
+Host brainiac.chi
+  Hostname brainiac.chi.braintreepayments.com
+  Port 51322
+  ConnectTimeout 5
+
+Host support01.chi support01.qa support01.stq support01.stc
+  Hostname %h.braintreepayments.com
+  Port 51322
+  ConnectTimeout 5
+  ForwardAgent yes
+
+Host warp1 warp
+  Hostname warp.braintreepayments.com
+
+Host warp.sav
+  Hostname warp.sav.braintreepayments.com
+
+Host warp.qwt
+  Hostname warp.qwt.braintreepayments.com
+
+Host warp.qwt warp.sav warp*.*.braintreepayments.com warp*.braintreepayments.com warp1 warp
+  Port 58224
+  ConnectTimeout 5
+  ForwardAgent yes
+  ControlMaster auto
+  ControlPath /tmp/%r@%h:%p
+  ControlPersist 15m
+
+# TODO: revisit after 2019-06-01, PayPal intends to upgrade DropZone to fix this.
+Host dropzone.paypalcorp.com
+  HostKeyAlgorithms ssh-rsa
+  KexAlgorithms diffie-hellman-group14-sha1

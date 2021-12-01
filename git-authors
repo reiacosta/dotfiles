@@ -1,0 +1,1013 @@
+#
+# For use with https://github.com/hamfist/go-git-duet
+# Also used now by our `gcw` alias (via our `gitcoauthoredby` utility)
+---
+# NOTE: When editing this file be sure to add your entry to
+# both the "authors" and "email_addresses" lists.
+# "authors" uses the user's GHE username and "email_addresses" uses
+# the GHE username and email address associated with the GHE user
+authors:
+  aacoleman: Adam Coleman
+  aannadi: Akshit Annadi
+  abaiyat: Amaan Baiyat
+  abalisetty: Ambareesh Balisetty
+  abeiderman: Alejandro Beiderman
+  abissell: Andrew Bissell
+  addlee: Addison Lee
+  adoglioli: Alejandro Doglioli
+  afrczak: Artur Fraczak
+  agunaseelanravin: Ashwin Gunaseelan Ravindran
+  ahazarika: Arabinda Hazarika
+  aismatov: Aktham Ismatov
+  aki: Aki Braun
+  aklitzke: Andrew Klitzke
+  aknowlton: Asher Knowlton
+  akowalz: Alex Kowalczuk
+  akparsons: Adam Parsons
+  akremens: Artur Kremens
+  akshankar: Akarshika Shankar
+  alassiter: Anthony Lassiter
+  alewozniak: Aleksander Woźniak
+  alexrichards: Allie Richards
+  almarkov: Aleksei Markov
+  amacy: Aaron Macy
+  amast: Aaron Mast
+  amillersmith: Andrew Miller-Smith
+  aminocha: Avi Minocha
+  andrei: Andrei Zbikowski
+  anevaidya: Aneesh Vaidya
+  angarrett: Andrew Garrett
+  anggarg: Angad Garg
+  anllewis: Anthony Lewis
+  anna: Anna Ho
+  anpelaez: Andres Pelaez
+  anton: Anton Dubyna
+  antross: Anthony Ross
+  anwhitaker: Andrew Whitaker
+  apodduturi: Advai Podduturi
+  arsawhney: Arjun Sawhney
+  ashsrivastava: Ashish Srivastava
+  asiok: Andy Siok
+  avenkata: Avinash Venkata
+  avidas: Avi Das
+  aviprasad: Avinash Prasad
+  aweiksnar: Alex Weiksnar
+  badahal: Bashanta Dahal
+  baesakkinathan: Balakannan Esakkinathan
+  basingh: Balwinder Singh
+  bbain: Bradley Bain
+  bchoiski: Bartlomiej Choinski
+  bcosgrove: Brian Cosgrove
+  bdeane: Brian Deane
+  beau: Beau Harrington
+  bedasilva: Bernardo Monteiro da Silva
+  besakkinathan: Bala Esakkinathan
+  bfijalkowski: Bartosz Fijalkowski
+  bgoldsbe: Brian Goldsberry
+  bgribov: Bella Gribov
+  binair: Biju Nair
+  bivenkataramanap: Bindu Shree Venkataramanappa
+  blade: Blade Barringer
+  bmcdonnel: Bryan McDonnel
+  bmczka: Benedykt Maczka
+  bmdavis: Brian Davis
+  bmohrbacher: Ben Mohrbacher
+  bneely: Ben Neely
+  bradrogers: Brad Rogers
+  branwright: Brandon Wright
+  brbusby: Brent Busby
+  btappel: Ben Tappel
+  bwalia: Bipandeep Walia
+  calerogers: Cale Rogers
+  caspowell: Casey Powell
+  cdoucette: Christian Doucette
+  cewarren: Curtis Warren
+  cforesman: Chris Foresman
+  cgarciadimanche: Carla Garcia
+  cgillan: Cooper Gillan
+  chriblake: Christopher Blake
+  chrissie: Chrissie Deist
+  chuho: Anna Ho
+  clfiske: Clay Fiske
+  cliggitt: Clayton Liggitt
+  cmaioli: Christian Maioli
+  cmargerum: Cole Margerum
+  cmschaefer: Cheryl Schaefer
+  cmsimmonds: Claire Simmonds
+  cochi: Connie Chi
+  cosgrove: Brian Cosgrove
+  cphan: Caitlin Phan
+  creisor: Chris Reisor
+  cschummer: Chris Schummer
+  csoyars: Chris Soyars
+  cvonkrogh: Chris von Krogh
+  czutler: Christopher Zutler
+  dahuber: Dave Huber
+  danieltaylor: Daniel Taylor
+  danquan: Daniel Quan
+  davcarroll: David Carroll
+  david.merino: David Merino
+  davikim: David Kim
+  daviwu: David Wu
+  davroberts: David Roberts
+  daybeck: Dayne Beck
+  dcurylo: Dominik Curylo
+  ddesore: Deepak Desore
+  desudhakar: Deeksha Sudhakar
+  devreddy: Devendren Reddy
+  dharbor: Daniel Harbor
+  dieoliveros: Diego Oliveros
+  dkanthalugnanesh: Dinesh Babu
+  dmikiewicz: Dariusz Miśkiewicz
+  dmiller2: David Miller
+  dnatochy: Dennis Natochy
+  doson: Dominic Son
+  dpb: David Busse
+  dpirotte: Dave Pirotte
+  dradtke: Damien Radtke
+  dsal: Daniel Salinas
+  dsathyamoorthy: Deepan Sathyamoorthy
+  dseeto: David Seeto
+  dstibal: Dylan Stibal
+  dturkcapar: Deniz Turkcapar
+  dtuszynski: Dominik Tuszynski
+  dustyshap: Dustin Shapiro
+  dwaits: Dylan Waits
+  edebill: Erik DeBill
+  efay: Eric Fay
+  ehine: Emmie Hine
+  emrak: Eric Mrak
+  enicholas: Eric Nicholas
+  esosa: Erica Sosa
+  evanzanten: Eric van Zanten
+  ewang1: Eric Wang
+  fadamjee: Farjad Adamjee
+  fang: Lisa Fang
+  fcaneri: Franco Caneri
+  fnkislay: FNU Kislay
+  forwu: Forest Wu
+  fqarni: Fatima Qarni
+  fthompson: Fiona Thompson
+  gdaniluk: Grzegorz Daniluk
+  gdumanian: Grant Dumanian
+  ghauska: Grzegorz Hauska
+  glaubenstein: Greg Laubenstein
+  gnhill: Greg Hill
+  goved: Gilad Oved
+  gsilcox: Greg Silcox
+  gwierzchowski: Grzegorz Wierzchowski
+  hchalamala: Harshavardhan Chalamala
+  hcheung: Helen Cheung
+  hdevulapally: Hari Devulapally
+  hedesai: Hemil Desai
+  hellanki: Harshavardhan Ellanki
+  hhegadehallimadh: Hemanth Hegadehalli Madhavarao
+  hlhunt: Hugh Hunt
+  hparanjape: Hrishikesh Paranjape
+  hrios: Hector Rios
+  hstotelmyer: Holly Stotelmyer
+  htumati: Hima Tumati
+  iboneva: Iana Boneva
+  ibooker: Iris Booker
+  iijagbone: Itua Ijagbone
+  ijaniuk: Ireneusz Janiuk
+  ilamhe: Irma Lam
+  imrak: Ian Mrak
+  ivhernandez: Ivan Hernandez
+  jacklund: Jack Lund
+  jacyoung: Jacob Young
+  jamebright: Jim Bright
+  jamenglish: Jamie English
+  jamesswaine: James Swaine
+  janani: Janani Thirunavukkarasu
+  japatel: Jay Patel
+  jaresty: Josh Aresty
+  jasalerno: Jason Salerno
+  jathorne: Jack Thorne
+  javenugopal: Jayaram Venugopal
+  jcoleman: James Coleman
+  jdeibert: James Deibert
+  jdesmarais: Jax DesMarais-Leder
+  jdicksonmeyer: Brendan Dickson Meyer 
+  jeconstantino: Justin Constantino
+  jerome: Jerome Knapp
+  jerry: Jerome Wisniewski
+  jertan: Jeremy Tan
+  jeshore: Jeremy Shore
+  jeslin: Jesse Lin
+  jfelchner: Jeff Felchner
+  jferm: Joel Ferm
+  jfurattini: Juan Furattini
+  jhathaway: Jesse Hathaway
+  jhume: John Hume
+  jiahahan: Jacky Han
+  jinalshah: Jinal Shah
+  jkingdon: Jim Kingdon
+  jkowalewski: Jarosław Kowalewski
+  jlong: Jeff Long
+  jlutton: Michael Lutton
+  jmunoz1: Jorge Munoz
+  jocalvert: Jonathan Calvert
+  jolbry: Jacek Olbrys
+  jonathajones: Jon Jones
+  jonathanlukens: Jonathan Lukens
+  jonchew: Jonathan Chew
+  jonoriega: Jose Noriega
+  joshuaknox: Joshua Knox
+  joshuaperez: Joshua Perez
+  jossuarez: Jose Suarez
+  jostendorf: Jeff Ostendorf
+  jplukarski: Joe Plukarski
+  jradon: Jonathan Radon
+  jrutt: Jeff Rutt
+  jsoundararajan: Jothimanikandan Soundararajan
+  jszwedko: Jesse Szwedko
+  jtavaresdelima: Joanna Tavares de Lima
+  jusmontoya: Justin Montoya
+  jwalp: Joe Walp
+  jwilczek: Jakub Wilczek
+  jyanowitz: Jason Yanowitz
+  jzyee: Joyce Yee
+  kabox: Kaylea Box
+  kaperry: Katelyn Perry
+  kashwani: Kumar Ashwani
+  katelyn: Katelyn Perry
+  kathrysmith: Kathryn Smith
+  kbarde: Kalpesh Barde
+  kboschert: Kevin Boschert
+  kenew: Kevin New
+  kfelkins: Kelly Felkins
+  kgoetsch: Kevin Goetsch
+  kkarski: Krzysztof Karski
+  kmikitin: Kait Mikitin
+  kpastorczyk: Krzysztof Pastorczyk
+  ksamuels: Kate Samuels
+  kyledetella: Kyle DeTella
+  lalevy: Laura Levy
+  landrukanis: Leszek Andrukanis
+  lcicatello: Lisa Cicatello
+  lfontalvo: Luis Fontalvo
+  lhightower: Lairen Hightower
+  likawang: Likai Wang
+  linchin: Lindsey Chin
+  lkorth: Luke Korth
+  lvickrey: Lyndon Vickrey
+  lwellman: Laura Wellman
+  lxue2: Li Xue
+  lyang: Lin Yang
+  mabraga: Maxmiliano Franco Braga
+  madamczyk: Marcin Adamczyk
+  mambareen: Maimuna Ambareen  
+  mangileri: Michael Angileri
+  marija: Marija Ferber
+  marko: Marko Masnjak
+  marpearce: Mary Pearce
+  marzielinski: Marek Zieliński
+  mashen: Marshall Shen
+  masznajder: Mariusz Sznajder
+  matcarter: Matt Carter
+  mathewduggan: Mathew Duggan
+  matjuarez: Matias Juarez
+  matkim: Matthew Kim
+  matmurphy: Matthew Murphy
+  mattikus: Matt Kemp
+  mayshankar: Maya Shankar
+  mborosh: Michael Borosh
+  mclay: Stephanie Clay
+  mdefreitas: Michael DeFreitas
+  mdenkers: Matt Denkers
+  mdiabromero: Miguel Diab
+  mdziewit: Marek Dziewit
+  meanil: Megha Anil
+  mechow: Melanie Chow
+  megdu: Megan Du
+  merubino: Melanie Rubino
+  mfairley: Michael Fairley
+  mferber: Marija Ferber
+  mflorkiewicz: Mikołaj Florkiewicz
+  mgalatanu: Monica Galatanu
+  mgaska: Maciej Gąska
+  mgiordano: Michael Giordano
+  mgoldshteyn: Marina Goldshteyn
+  mgowacki: Maciej Głowacki
+  miblanco: Michael Blanco
+  micparrish: Michael Parrish
+  midarnell: Mike Darnell
+  migueldiab: Miguel Diab
+  mikedarnell: Mike Darnell
+  mikemettler: Mike Mettler
+  milesoc: Miles O'Connell
+  minuagrawal: Minu Agrawal
+  mjacunski: Matt Jacunski
+  mjhogan: Matt Hogan
+  mkanhirun: Melissa Kanhirun
+  mkhati: Min Khati
+  mkirlin: Michael Gandhi-Kirlin
+  mkoga: Micah Koga
+  mleger: Maor Leger
+  mlou: Maggie Lou
+  mmukerjee: Madhuri Mukerjee
+  mnomura: Mami Nomura
+  mohsbaig: Mohsin Baig
+  monghosh: Moni Ghosh
+  mosinski: Miłosz Osiński
+  ms: Margarita Sokolova
+  mscoulter: Meredith Coulter
+  mskodowski: Marcin Skłodowski
+  msobieszek: Michal Sobieszek
+  mswiszcz: Mateusz Swiszcz
+  mtarsa: Michal Tarsa
+  mtattersall: Mark Tattersall
+  mtzeka: Maria Tzeka
+  mukamal: Mustofa Kamal
+  muozdemir: Mustafa Ozdemir
+  mvallaly: Michael Vallaly
+  mvalletta: Martin Valletta
+  mzynek: Michal Zynek
+  namarron: Najash Marron
+  nbachman: Nancy Bachman
+  nborra: Nagarjuna Borra
+  ndahiya: Nitesh Dahiya
+  ndangles: Nick Dangles
+  nduggirala: Priyanka Duggirala
+  njerschow: Nikita Jerschow
+  nkalathuru: Nikhila Kalathuru
+  nmikhol: Natalie Mikhol
+  nmunoz: Nicolas Muñoz
+  nn: Nick Novitski
+  nnarasimhan: Nathan Narasimhan
+  nnytko: Norbert Nytko
+  npantaleo: Nathan Pantaleo
+  npaturi: Naresh Kumar Paturi
+  nschafhauser: Nick Schafhauser
+  nvelkur: Nitin Velkur
+  nvinnakota: Nishitha Vinnakota
+  nxia: Ning Xia
+  nyaganti: Nisanth Yaganti
+  nysa: Nysa Vann
+  ojanusz: Oskar Janusz
+  oweng: Olivia Weng
+  pabis: Pawel Bis
+  pachaudhari: Parag Chaudhari
+  pahanson: Paige Hanson
+  patbrown: Patrick A. Brown
+  paulhenry: Paul Henry
+  pbcoronel: Pedro Coronel
+  pczajka: Paul Czajka
+  pdex: Chris Keating
+  pduttala: Prathyusha Duttala
+  petnguyen: Peter Nguyen
+  phchan: Philip Chan
+  phinman: Phebe Hinman
+  pmroczek: Przemek Mroczek
+  pmuruganandam: Pradeep Muruganandam
+  pprzyucki: Pawel Przylucki
+  prajayaraman: Prabhu Jayaraman
+  praveensingh: Praveendra Singh
+  prazgaitis: Paul Razgaitis
+  prkul: Prateep Kul
+  pshaganti: Prem Shaganti
+  pwald: Piotr Wald
+  pzaitsev: Pavel Zaitsev
+  pzee: Philip Zee
+  qneumiiller: Quinn Neumiiller
+  quinnjn: Quinn Neumiiller
+  ranmason: Randall Mason
+  rarunachalam: Raajesh Arunachalam
+  rbahniuk: Ryan Bahniuk
+  rchen: Ronnie Chen
+  rcsellers: Ryan Sellers
+  rdmurphy: Ryan Murphy
+  rebeccayoung: Rebecca Young
+	reiacosta: Reinaldo Acosta
+  reschinger: Ryan Eschinger
+  rglebov: Roman Glebov
+  ribrock: Rick Brock
+  richardshin: Richard Shin
+  rjwiak: Roman Józwiak
+  rkala : Ronak Kala
+  rkedia: Rishab Kedia
+  rkrage: Ryan Krage
+  rlacoste: Dana Lacoste
+  rmerl: Ryan Merl
+  rmurali: Raga Murali
+  robetorres: Rob Torres
+  rod: Ryan O'Donnell
+  rohit: Rohit Turumella
+  rolou: Robert Lou
+  rosejen: Rose Jen
+  rrook: Riley Rook
+  ryoesting: Rick Yoesting
+  rysellers: Ryan Sellers
+  sadasgupta: Sagarika Dasgupta
+  samekala: Sai Mekala
+  saquintana: Santiago Quintana
+  saramineni: Samatha Ramineni
+  sashburn: Emily Ashburn
+  sashaweiss: Sasha Weiss
+  sashburn: Emily Ashburn
+  sasoppa: Saran Soppa
+  sasunkara: Sasank Sunkara
+  sbroach: Sonja Broach
+  scannillo: Samantha Cannillo
+  schneiderik: Erik Schneider
+  schu: Stephen Chu
+  sckruger: Scott Kruger
+  scomorgan: Scott Morgan
+  scothomas: Scott Thomas
+  sdecaro: Sharon DeCaro
+  seflynn: Sean Flynn
+  sekoudosso: Sekou Dosso
+  sestevens: Susan Stevens
+  shakale: Sharmila Kale
+  sharkim: Sharon Kim
+  shaun: Shaun Crittenden
+  shelcoleman: Shelby Coleman
+  shgautam: Shashi Kant Gautam
+  shipshah: Shipra Shah
+  shireddy: Shiv Reddy
+  shiwli: Shiwei Li
+  shrmohan: Shreyas Mohan
+  sikadakia: Simul Kadakia
+  sjayaseelan: Jayaseelan Shanmugam
+  sjones6: Sam Jones
+  sjparsons: Sam Parsons
+  skabbas: Syed K Abbas
+  skoop: Sarah Koop
+  skoothumadan: Sadique Ali Koothumadan
+  skpatterson: Stephen Patterson
+  skuchipudi: Sudheer Kuchipudi
+  snandelli: Sriveda Nandelli
+  sonnigam: Sonia Nigam
+  spencerregalado: Spencer Regalado
+  srakhman: Lana Rakhman
+  sravreddy: Sravani Reddy
+  srgadde: Srivyshnavi Gadde
+  ssalerno: Suzanne Salerno
+  ssatchwill: Sydney Satchwill
+  sseethapathy: Sasikumar Seethapathy
+  ssgelm: Stephen Gelman
+  sshariff: Shoabe Shariff
+  sshropshire: Steven Shropshire
+  ssinnarajah: Shayanth Sinnarajah
+  stecarlson: Steven Carlson
+  stevdiaz: Steven Diaz
+  stevenmeek: Steven Meek
+  stirumalashetty: Seshu Tirumalashetty
+  straversi: Steven Traversi
+  stwen: Ethan Tay
+  sumohandoss: Surith Nivas
+  svankadara: Sudha Vankadara
+  sveeravalli: Suresh Veeravalli
+  svemulapalli: Sandeep Vemulapalli
+  swmahajan: Swapnil Mahajan
+  tbaraniecki: Tomasz Baraniecki
+  tbuchta: Tomasz Buchta
+  terchavez: Teresa Chavez
+  thenguyen: Minh Nguyen
+  thocook: Thomas Cook
+  tichow: Tim Chow
+  tijpeters: Tijesunimi Peters
+  tklun: Tom Klun
+  tlangham: Tim Langham
+  tmartinak: Timothy Martinak
+  tminard: Tyler Minard
+  tmottajorge: Tiago Motta Jorge
+  toconrad: Tory Conrad
+  tpatat: Tim Patat
+  tpiekarec: Tomasz Piekarec
+  traff: Tobit Raff
+  trgupta: Tripta Gupta
+  tsellitto: Tiziana Sellitto
+  tsoptame: TJ Soptame
+  ttimbric: Tiffany Timbric
+  tuvo1: Tu Vo
+  tye.wang: Tye Wang
+  uhoronziak: Łukasz Horonziak
+  varney: varney
+  vdasaraju: Vishnu Dasaraju
+  vichandrasekar: Vishnu Chandrasekar
+  vindwivedi: Vinay Dwivedi
+  viparikh: Viken Shaumitra Parikh
+  vivnguyen: Vivien Nguyen
+  vjhala: Vishal Jhala
+  vmannepalli: Venkata Mannepalli
+  vpolavajram: Vinod Polavajram
+  vprokopchuk: Valerii Prokopchuk
+  vrdeo: Vrushali Deo
+  vsangam: Vathsalya Sangam
+  vshivnani: Vipul Shivnani
+  wilconner: William Conner
+  williamiller: William Miller
+  wmckenney: Wil McKenney
+  xfrench: Savannah French
+  xhang: Shawn Hang
+  yanzhan: Yan Zhan
+  yaxhu: Yaxiong Hu
+  zable: Brian Zable
+  zachz: Zach Zolton
+  ziffeng: Zifei Feng
+  zpalmer: Zoe Palmer-Pike
+  zshkolnikov: Zinovy Shkolnikov
+  zsyed: Zshawn Syed
+email_addresses:
+  aacoleman: adam.coleman@getbraintree.com
+  aannadi: akshit.annadi@getbraintree.com
+  abaiyat: abaiyat@paypal.com
+  abalisetty: abalisetty@paypal.com
+  abeiderman: alejandro.beiderman@getbraintree.com
+  abissell: andrew.bissell@getbraintree.com
+  addlee: addlee@paypal.com
+  adoglioli: adoglioli@paypal.com
+  afrczak: afrczak@paypal.com
+  agunaseelanravin: agunaseelanravin@paypal.com
+  ahazarika: ahazarika@paypal.com
+  aismatov: aismatov@paypal.com
+  aki: akbraun@paypal.com
+  aklitzke: andrew.klitzke@getbraintree.com
+  aknowlton: asher.knowlton@getbraintree.com
+  akowalz: alex.kowalczuk@getbraintree.com
+  akparsons: adam.parsons@getbraintree.com
+  akremens: akremens@paypal.com
+  akshankar: akshankar@paypal.com
+  alassiter: alassiter@paypal.com
+  alewozniak: alewozniak@paypal.com
+  alexrichards: allie.richards@getbraintree.com
+  almarkov: almarkov@paypal.com
+  amacy: aaron.macy@getbraintree.com
+  amast: amast@paypal.com
+  amillersmith: amillersmith@paypal.com
+  aminocha: avi.minocha@getbraintree.com
+  andrei: andrei.zbikowski@braintreepayments.com
+  anevaidya: aneesh.vaidya@getbraintree.com
+  angarrett: angarrett@paypal.com
+  anggarg: angad.garg@getbraintree.com
+  anllewis: anthony.lewis@getbraintree.com
+  anna: chun-hui.ho@getbraintree.com
+  anpelaez: anpelaez@paypal.com
+  anton: anton.dubyna@getbraintree.com
+  antross: anthony.ross@getbraintree.com
+  anwhitaker: anwhitaker@paypal.com
+  apodduturi: advai.podduturi@getbraintree.com
+  arsawhney: arsawhney@paypal.com
+  ashsrivastava: ashsrivastava@paypal.com
+  asiok: andy.siok@getbraintree.com
+  avenkata: avenkata@paypal.com
+  avidas: avi@getbraintree.com
+  aviprasad: aviprasad@paypal.com
+  aweiksnar: alex.weiksnar@getbraintree.com
+  badahal: bashanta.dahal@getbraintree.com
+  baesakkinathan: baesakkinathan@paypal.com
+  basingh: basingh@paypal.com
+  bbain: bradley.bain@getbraintree.com
+  bchoiski: bchoiski@paypal.com
+  bcosgrove: brian.cosgrove@getbraintree.com
+  bdeane: brian.deane@getbraintree.com
+  beau: beau@getbraintree.com
+  bedasilva: bedasilva@paypal.com
+  besakkinathan: besakkinathan@paypal.com
+  bfijalkowski: bfijalkowski@paypal.com
+  bgoldsbe: brian.goldsberry@getbraintree.com
+  bgribov: bella.gribov@getbraintree.com
+  binair: biju.balakrishnan.nair@getbraintree.com
+  bivenkataramanap: bivenkataramanap@paypal.com
+  blade: blade.barringer@getbraintree.com
+  bmcdonnel: bryan.mcdonnel@getbraintree.com
+  bmczka: bmczka@paypal.com
+  bmdavis: brian.davis@getbraintree.com
+  bmohrbacher: ben.mohrbacher@getbraintree.com
+  bneely: bneely@paypal.com
+  bradrogers: brad.rogers@getbraintree.com
+  branwright: branwright@paypal.com
+  brbusby: brent.busby@getbraintree.com
+  btappel: ben.tappel@getbraintree.com
+  bwalia: bwalia@paypal.com
+  calerogers: cale.rogers@getbraintree.com
+  caspowell: casey.powell@getbraintree.com
+  cdoucette: cdoucette@paypal.com
+  cewarren: curtis.warren@getbraintree.com
+  cforesman: cforesman@paypal.com
+  cgarciadimanche: cgarciadimanche@paypal.com
+  cgillan: cgillan@paypal.com
+  chriblake: chriblake@paypal.com
+  chrissie: chrissie.deist@getbraintree.com
+  chuho: chun-hui.ho@getbraintree.com
+  clfiske: clfiske@paypal.com
+  cliggitt: clayton.liggitt@getbraintree.com
+  cmargerum: cmargerum@paypal.com
+  cmschaefer: cmschaefer@paypal.com
+  cmsimmonds: cmsimmonds@paypal.com
+  cochi: cochi@paypal.com
+  cosgrove: brian.cosgrove@getbraintree.com
+  cphan: cphan@paypal.com  
+  creisor: chris.reisor@getbraintree.com
+  cschummer: christopher.schummer@getbraintree.com
+  csoyars: chris.soyars@getbraintree.com
+  cvonkrogh: chris.vonkrogh@getbraintree.com
+  czutler: czutler@paypal.com
+  dahuber: david.huber@getbraintree.com
+  danieltaylor: daniel.taylor@getbraintree.com
+  danquan: daniel.quan@getbraintree.com
+  davcarroll: davcarroll@paypal.com
+  david.merino: david.merino@getbraintree.com
+  davikim: david.kim@getbraintree.com
+  daviwu: daviwu@paypal.com
+  davroberts: david.roberts@getbraintree.com
+  daybeck: dayne.beck@getbraintree.com
+  dcurylo: dcurylo@paypal.com
+  ddesore: ddesore@paypal.com
+  devreddy: devreddy@paypal.com
+  dharbor: dharbor@getbraintree.com
+  dieoliveros: dieoliveros@paypal.com
+  dkanthalugnanesh: dkanthalugnanesh@paypal.com
+  dmikiewicz: dmikiewicz@paypal.com
+  dmiller2: david.miller@getbraintree.com
+  dnatochy: dennis.natochy@getbraintree.com
+  doson: doson@paypal.com
+  dpb: david.busse@getbraintree.com
+  dpirotte: dave.pirotte@getbraintree.com
+  dradtke: damien.radtke@getbraintree.com
+  dsal: daniel.salinas@getbraintree.com
+  dsathyamoorthy: dsathyamoorthy@paypal.com
+  dseeto: david.seeto@getbraintree.com
+  dstibal: dylan.stibal@getbraintree.com
+  dturkcapar: deniz.turkcapar@getbraintree.com
+  dtuszynski: dtuszynski@paypal.com
+  dustyshap: dustin.shapiro@getbraintree.com
+  dwaits: dwaits@paypal.com
+  edebill: erik.debill@getbraintree.com
+  efay: eric.fay@getbraintree.com
+  ehine: emmie.hine@getbraintree.com
+  emrak: emrak@paypal.com
+  enicholas: eric.nicholas@getbraintree.com
+  esosa: erica.sosa@getbraintree.com
+  evanzanten: eric.van.zanten@getbraintree.com
+  ewang1: ewang1@paypal.com
+  fadamjee: fadamjee@paypal.com
+  fang: lisa.fang@getbraintree.com
+  fcaneri: fcaneri@paypal.com
+  fnkislay: fnkislay@paypal.com
+  forwu: forwu@paypal.com
+  fqarni: fatima.qarni@getbraintree.com
+  fthompson: fiona.thompson@getbraintree.com
+  gdaniluk: gdaniluk@paypal.com
+  gdumanian: gdumanian@paypal.com
+  ghauska: ghauska@paypal.com
+  glaubenstein: greg.laubenstein@getbraintree.com
+  gnhill: greg.hill@getbraintree.com
+  goved: gilad.oved@getbraintree.com
+  gsilcox: gsilcox@paypal.com
+  gwierzchowski: gwierzchowski@paypal.com
+  hchalamala: hchalamala@paypal.com
+  hcheung: hcheung@paypal.com
+  hdevulapally: hdevulapally@paypal.com
+  hedesai: hemil.desai@getbraintree.com
+  hellanki: hellanki@paypal.com
+  hhegadehallimadh: hemanth.hhegadehallimadh@braintreepayments.com
+  hlhunt: hlhunt@paypal.com
+  hparanjape: hparanjape@paypal.com
+  hrios: hrios@paypal.com
+  hstotelmyer: holly.stotelmyer@getbraintree.com
+  htumati: htumati@paypal.com
+  iboneva: iana.boneva@getbraintree.com
+  ibooker: iris.booker@getbraintree.com
+  iijagbone: itua.ijagbone@getbraintree.com
+  ijaniuk: ijaniuk@paypal.com
+  ilamhe: irma.lamhe@getbraintree.com
+  imrak: imrak@paypal.com
+  ivhernandez: ivan.hernandez@getbraintree.com
+  jacklund: jaclund@paypal.com
+  jacyoung: jacob.r.young@getbraintree.com
+  jamebright: jamebright@paypal.com
+  jamenglish: jamie.english@getbraintree.com
+  jamesswaine: james.swaine@braintreepayments.com
+  janani: janani@getbraintree.com
+  japatel: jay.patel@getbraintree.com
+  jaresty: jaresty@paypal.com
+  jasalerno: jason.salerno@getbraintree.com
+  jathorne: jack.thorne@getbraintree.com
+  javenugopal: javenugopal@paypal.com
+  jcoleman: jamecoleman@paypal.com
+  jdeibert: james.deibert@getbraintree.com
+  jdesmarais: jdesmarais@paypal.com
+  jdicksonmeyer: jdicksonmeyer@paypal.com
+  jeconstantino: jeconstantino@paypal.com
+  jerome: jerome@braintreepayments.com
+  jerry: jerome.wisniewski@getbraintree.com
+  jertan: jeremy.tan@getbraintree.com
+  jeshore: jeremy.shore@getbraintree.com
+  jeslin: jeslin@paypal.com
+  jfelchner: jeff.felchner@getbraintree.com
+  jferm: joel.ferm@getbraintree.com
+  jfurattini: jfurattini@paypal.com
+  jhathaway: hathaway@paypal.com
+  jhume: jhume@paypal.com
+  jiahahan: jiahahan@paypal.com
+  jinalshah: jinalshah@paypal.com
+  jkingdon: jkingdon@paypal.com
+  jkowalewski: jkowalewski@paypal.com
+  jlong: jeff.long@getbraintree.com
+  jlutton: michael.lutton@getbraintree.com
+  jmunoz1: jorge.munoz@getbraintree.com
+  jocalvert: jonathan.calvert@getbraintree.com
+  jolbry: jolbry@paypal.com
+  jonathajones: jonathajones@paypal.com
+  jonathanlukens: jonathan.lukens@getbraintree.com
+  jonchew: jonathan.chew@getbraintree.com
+  jonoriega: jonoriega@paypal.com
+  joshuaknox: joshua.knox@getbraintree.com
+  joshuaperez: joshua.perez@getbraintree.com
+  jossuarez: jossuarez@paypal.com
+  jostendorf: jeff.ostendorf@getbraintree.com
+  jplukarski: jplukarski@paypal.com
+  jradon: jonathan.radon@getbraintree.com
+  jrutt: jeff.rutt@getbraintree.com
+  jsoundararajan: jsoundararajan@paypal.com
+  jszwedko: jesse.szwedko@getbraintree.com
+  jusmontoya: jusmontoya@paypal.com
+  jwalp: joe.walp@getbraintree.com
+  jwilczek: jwilczek@paypal.com
+  jyanowitz: jason.yanowitz@getbraintree.com
+  jzyee: jzyee@paypal.com
+  kabox: kabox@paypal.com
+  kaperry: katelyn.perry@getbraintree.com
+  kashwani: kashwani@paypal.com
+  katelyn: katelyn.perry@getbraintree.com
+  kathrysmith: kathryn.smith@getbraintree.com
+  kbarde: kbarde@paypal.com
+  kboschert: kboschert@paypal.com
+  kenew: kenew@paypal.com
+  kfelkins: kelly.felkins@getbraintree.com
+  kgoetsch: kevin.goetsch@getbraintree.com
+  kkarski: kkarski@paypal.com
+  kmikitin: kaitlyn.mikitin@venmo.com
+  kpastorczyk: kpastorczyk@paypal.com
+  ksamuels: ksamuels@paypal.com
+  kyledetella: kyle.detella@getbraintree.com
+  lalevy: laura.levy@getbraintree.com
+  landrukanis: landrukanis@paypal.com
+  lcicatello: lcicatello@paypal.com
+  lfontalvo: lfontalvo@paypal.com
+  lhightower: lairen.hightower@getbraintree.com
+  likawang: likawang@paypal.com
+  linchin: linchin@paypal.com
+  lkorth: lkorth@paypal.com
+  lvickrey: lvickrey@paypal.com
+  lwellman: laura.wellman@getbraintree.com
+  lxue2: li.xue@getbraintree.com
+  lyang: lin.yang@getbraintree.com
+  mabraga: mabraga@paypal.com
+  madamczyk: madamczyk@paypal.com
+  mambareen: mambareen@paypal.com
+  mangileri: michael.angileri@venmo.com
+  marija: marija.ferber@getbraintree.com
+  marko: marko.masnjak@getbraintree.com
+  marpearce: mary.pearce@getbraintree.com
+  marzielinski: marzielinski@paypal.com
+  mashen: marshall.shen@getbraintree.com
+  masznajder: masznajder@paypal.com
+  matcarter: matthew.carter@getbraintree.com
+  mathewduggan: mathew.duggan@getbraintree.com
+  matjuarez: matjuarez@paypal.com
+  matkim: matkim@paypal.com
+  matmurphy: matthew.murphy@getbraintree.com
+  mattikus: matthew.kemp@getbraintree.com
+  mayshankar: mayshankar@paypal.com
+  mborosh: michael.borosh@getbraintree.com
+  mclay: mclay@paypal.com
+  mdefreitas: michael.defreitas@getbraintree.com
+  mdenkers: mdenkers@paypal.com
+  mdiabromero: miguel.diab@getbraintree.com
+  mdziewit: mdziewit@paypal.com
+  meanil: meanil@paypal.com
+  mechow: melanie.chow@getbraintree.com
+  megdu: megdu@paypal.com
+  merubino: melanie.rubino@getbraintree.com
+  mfairley: michael.fairley@getbraintree.com
+  mferber: marija.ferber@getbraintree.com
+  mflorkiewicz: mflorkiewicz@paypal.com
+  mgalatanu: mgalatanu@paypal.com
+  mgaska: mgaska@paypal.com
+  mgiordano: mgiordano@paypal.com
+  mgoldshteyn: marina.goldshteyn@braintreepayments.com
+  mgowacki: mgowacki@paypal.com
+  miblanco: miblanco@paypal.com
+  micparrish: michael.parrish@getbraintree.com
+  midarnell: mike.darnell@getbraintree.com
+  migueldiab: miguel.diab@getbraintree.com
+  mikedarnell: mike.darnell@getbraintree.com
+  mikemettler: mike.mettler@getbraintree.com
+  milesoc: miles.oconnell@getbraintree.com
+  minuagrawal: minuagrawal@paypal.com
+  mjacunski: matt.jacunski@getbraintree.com
+  mjhogan: matthew.hogan@getbraintree.com
+  mkanhirun: mkanhirun@paypal.com
+  mkhati: mkhati@paypal.com
+  mkirlin: mkirlin@paypal.com
+  mkoga: micah.koga@getbraintree.com
+  mleger: maor.leger@getbraintree.com
+  mlou: maggie.lou@getbraintree.com
+  mmukerjee: madhuri.mukerjee@getbraintree.com
+  mnomura: mami.nomura@getbraintree.com
+  mohsbaig: mohsin.baig@getbraintree.com
+  monghosh: monghosh@paypal.com
+  mosinski: mosinski@paypal.com
+  ms: margarita.sokolova@getbraintree.com
+  mscoulter: mscoulter@paypal.com
+  mskodowski: mskodowski@paypal.com
+  msobieszek: msobieszek@paypal.com
+  mswiszcz: mswiszcz@paypal.com
+  mtarsa: mtarsa@paypal.com
+  mtattersall: mark.tattersall@getbraintree.com
+  mtzeka: maria.tzeka@getbraintree.com
+  mukamal: mukamal@paypal.com
+  muozdemir: muozdemir@paypal.com
+  mvallaly: mike@getbraintree.com
+  mvalletta: mvalletta@paypal.com
+  mycho: mycho@paypal.com
+  mzynek: mzynek@paypal.com
+  namarron: namarron@paypal.com
+  nbachman: nancy.bachman@getbraintree.com
+  nborra: nborra@paypal.com
+  ndahiya: ndahiya@paypal.com
+  ndangles: nick.dangles@getbraintree.com
+  nduggirala: nduggirala@paypal.com
+  njerschow: njerschow@paypal.com
+  nkalathuru: nkalathuru@paypal.com
+  nmikhol: nmikhol@paypal.com
+  nmunoz: nmunoz@paypal.com
+  nn: nick.novitski@getbraintree.com
+  nnarasimhan: nnarasimhan@paypal.com
+  nnytko: nnytko@paypal.com
+  npantaleo: npantaleo@paypal.com
+  npaturi: npaturi@paypal.com
+  nschafhauser: nschafhauser@paypal.com
+  nvelkur: nitin.velkur@getbraintree.com
+  nvinnakota: nvinnakota@paypal.com
+  nxia: ning.xia@getbraintree.com
+  nyaganti: nyaganti@paypal.com
+  nysa: nysa.vann@getbraintree.com
+  ojanusz: ojanusz@paypal.com
+  oweng: olivia.weng@getbraintree.com
+  pabis: pabis@paypal.com
+  pachaudhari: pachaudhari@paypal.com
+  pahanson: pahanson@paypal.com
+  patbrown: patrick.a.brown@getbraintree.com
+  paulhenry: paul.henry@getbraintree.com
+  pbcoronel: pedro.coronel@getbraintree.com
+  pczajka: paul.czajka@getbraintree.com
+  pdex: chris.keating@getbraintree.com
+  pduttala: pduttala@paypal.com
+  petnguyen: peter.nguyen@getbraintree.com
+  phchan: phchan@paypal.com
+  phinman: phebe.hinman@getbraintree.com
+  pmroczek: pmroczek@paypal.com
+  pmuruganandam: pmuruganandam@paypal.com
+  pprzyucki: pprzyucki@paypal.com
+  prajayaraman: prajayaraman@paypal.com
+  praveensingh: praveendra.singh@getbraintree.com
+  prazgaitis: paul.razgaitis@getbraintree.com
+  prkul: prkul@paypalcom
+  pshaganti: pshaganti@paypal.com
+  pwald: pwald@paypal.com
+  pzaitsev: pzaitsev@paypal.com
+  pzee: philip.zee@getbraintree.com
+  qneumiiller: quinn@getbraintree.com
+  quinnjn: quinn@getbraintree.com
+  ranmason: ranmason@paypal.com
+  rarunachalam: raajesh.arunachalam@getbraintree.com
+  rbahniuk: ryan.bahniuk@getbraintree.com
+  rchen: ronnie.chen@getbraintree.com
+  rcsellers: ryan.sellers@braintreepayments.com
+  rdmurphy: rdmurphy@paypal.com
+  rebeccayoung: rebecca.young@getbraintree.com
+	reiacosta: reiacosta@paypal.com
+  reschinger: reschinger@paypal.com
+  rglebov: rglebov@paypal.com
+  ribrock: rick.brock@getbraintree.com
+  richardshin: richard.shin@getbraintree.com
+  rishin: rishin@paypal.com
+  rjwiak: rjwiak@paypal.com
+  rkala: rkala@paypal.com
+  rkedia: rishab.kedia@getbraintree.com
+  rkrage: ryan.krage@getbraintree.com
+  rlacoste: rlacoste@paypal.com
+  rmerl: ryan.merl@getbraintree.com
+  rmurali: rmurali@paypal.com
+  robetorres: robetorres@paypal.com
+  rod: ryan.odonnell@getbraintree.com
+  rohit: rohit.turumella@getbraintree.com
+  rolou: robert.lou@getbraintree.com
+  rosejen: rose.jen@getbraintree.com
+  rrook: riley.rook@getbraintree.com
+  ryoesting: ryoesting@paypal.com
+  rysellers: ryan.sellers@braintreepayments.com
+  sadasgupta: sadasgupta@paypal.com
+  samekala: samekala@paypal.com
+  saramineni: saramineni@paypal.com
+  sashaweiss: sasha.weiss@getbraintree.com
+  sashburn: sashburn@paypal.com
+  sasoppa: sasoppa@paypal.com
+  sasunkara: sasunkara@paypal.com
+  sbroach: sonja.broach@getbraintree.com
+  scannillo: samantha.cannillo@getbraintree.com
+  schneiderik: erik.schneider@getbraintree.com
+  schu: stephen.chu@getbraintree.com
+  sckruger: scott.kruger@getbraintree.com
+  scomorgan: scomorgan@paypal.com
+  scothomas: scothomas@paypal.com
+  sdecaro: sdecaro@paypal.com
+  seflynn: seflynn@paypal.com
+  sekoudosso: sdosso@paypal.com
+  sestevens: susan.stevens@getbraintree.com
+  shakale: shakale@paypal.com
+  sharkim: sharon.kim@getbraintree.com
+  shaun: shaun@braintreepayments.com
+  shelcoleman: shelcoleman@paypal.com
+  shgautam: shgautam@paypal.com
+  shipshah: shipshah@paypal.com
+  shireddy: shireddy@paypal.com
+  shiwli: shiwli@paypal.com
+  shrmohan: shreyas.mohan@getbraintree.com
+  sikadakia: sikadakia@paypal.com
+  sjayaseelan: sjayaseelan@paypal.com
+  sjones6: sjones6@paypal.com
+  sjparsons: sam.parsons@getbraintree.com
+  skabbas: syed.abbas@braintreepayments.com
+  skoop: skoop@paypal.com
+  skoothumadan: sadiqueali.koothumadan@getbraintree.com
+  skpatterson: stephen.patterson@braintreepayments.com
+  skuchipudi: skuchipudi@paypal.com
+  snandelli: snandelli@paypal.com
+  sonnigam: sonia.nigam@getbraintree.com
+  spencerregalado: spencer.regalado@getbraintree.com
+  srakhman: lana.rakhman@getbraintree.com
+  sravreddy: sravreddy@paypal.com
+  srgadde: srgadde@paypal.com
+  ssalerno: ssalerno@paypal.com
+  ssatchwill: sydney.satchwill@getbraintree.com
+  sseethapathy: sseethapathy@paypal.com
+  ssgelm: stephen.gelman@getbraintree.com
+  sshariff: sshariff@paypal.com
+  sshropshire: steven.shropshire@getbraintree.com
+  ssinnarajah: ssinnarajah@paypal.com
+  stecarlson: stecarlson@paypal.com
+  stevdiaz: steven.diaz@getbraintree.com
+  stevenmeek: steven.meek@getbraintree.com
+  stirumalashetty: stirumalashetty@paypal.com
+  straversi: steven.traversi@getbraintree.com
+  stwen: stwen@paypal.com
+  sumohandoss: sumohandoss@paypal.com
+  svankadara: svankadara@paypal.com
+  sveeravalli: sveeravalli@paypal.com
+  svemulapalli: svemulapalli@paypal.com
+  swmahajan: swmahajan@paypal.com
+  tbaraniecki: tbaraniecki@paypal.com
+  tbuchta: tbuchta@paypal.com
+  terchavez: teresa.chavez@getbraintree.com
+  thenguyen: thenguyen@paypal.com
+  thocook: thocook@paypal.com
+  tichow: tichow@paypal.com
+  tijpeters: tijpeters@paypal.com
+  tklun: tom.klun@getbraintree.com
+  tlangham: timothy.langham@getbraintree.com
+  tmartinak: timothy.martinak@getbraintree.com
+  tminard: tyler.minard@getbraintree.com
+  tmottajorge: tiago.mottajorge@getbraintree.com
+  toconrad: toconrad@paypal.com
+  tpatat: tpatat@paypal.com
+  tpiekarec: tpiekarec@paypal.com
+  traff: traff@paypal.com
+  trgupta: trgupta@paypal.com
+  tsellitto: tsellitto@paypal.com
+  tsoptame: tomjo.soptame@venmo.com
+  ttimbric: ttimbric@paypal.com
+  tuvo1: tuvo1@paypal.com
+  tye.wang: tye.wang@getbraintree.com
+  uhoronziak: uhoronziak@paypal.com
+  varney: varney@braintreepayments.com
+  vdasaraju: vishnu.dasaraju@getbraintree.com
+  vichandrasekar: vichandrasekar@paypal.com
+  vindwivedi: vindwivedi@paypal.com
+  viparikh: viparikh@paypal.com
+  vivnguyen: vivien.nguyen@getbraintree.com
+  vjhala: vishal.jhala@getbraintree.com
+  vmannepalli: vmannepalli@paypal.com
+  vpolavajram: vpolavajram@paypal.com
+  vprokopchuk: vprokopchuk@paypal.com
+  vrdeo: vrdeo@paypal.com
+  vsangam: vsangam@paypal.com
+  vshivnani: vipul.shivnani@getbraintree.com
+  wilconner: william.conner@getbraintree.com
+  williamiller: william.miller@getbraintree.com
+  wmckenney: wmckenney@paypal.com
+  xfrench: xfrench@paypal.com
+  xhang: xhang@paypal.com
+  yanzhan: yanzhan@paypal.com
+  yaxhu: yaxhu@paypal.com
+  zable: brian.zable@getbraintree.com
+  zachz: zachary.zolton@getbraintree.com
+  ziffeng: zifei.feng@getbraintree.com
+  zpalmer: zpalmer@paypal.com
+  zshkolnikov: zinovy.shkolnikov@getbraintree.com
+  zsyed: zsyed@paypal.com

@@ -1,0 +1,7 @@
+" Don't Format Dimension Terraform tfvars
+" In dimension-terraform, we use the tfvars very specifically, this allows us
+" to turn off formatting on anything that includes 'dimension-terraform' and
+" ends with 'tfvars'
+let g:ale_pattern_options = {
+      \   'dimension-terraform/.*\.tfvars$': {'ale_fixers': {}},
+      \}
